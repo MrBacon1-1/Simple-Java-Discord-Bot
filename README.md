@@ -25,6 +25,7 @@
   - Has a help command. ❓
   
   - Has a ping command to get some data about the bot. ⚡
-  
+</p>
+<p align="center">
   <b>⭐More Coming Soon⭐</b><br><br>
 </p>
