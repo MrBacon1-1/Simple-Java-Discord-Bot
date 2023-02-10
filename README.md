@@ -4,15 +4,15 @@
 <p align="center">
   <b>~ How to use ~</b><br><br>
   
- -  Download The Files As A Zip
+ -  Download the files as a zip.
  
- -  Open Using IntelliJ or Other Code Editors
+ -  Open using IntelliJ or other code editors.
  
- -  In Main.java Put Your Discord Bots Token
+ -  In Main.java put your discord bots token.
  
- -  Make Sure Your Bot Has Server Member Intent Toggled On
+ -  Make sure your bot has server member intent toggled on.
  
  ![image](https://user-images.githubusercontent.com/105984061/218119028-1f267f94-e934-49b9-9307-c3df49c38097.png)
  
- - And Run The Project And All Should Work
+ - And run the project, all should work
 </p>
