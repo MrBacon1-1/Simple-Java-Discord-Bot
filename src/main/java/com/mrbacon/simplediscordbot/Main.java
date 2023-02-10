@@ -1,5 +1,6 @@
 package com.mrbacon.simplediscordbot;
 
+import com.mrbacon.simplediscordbot.commands.HelpCommand;
 import com.mrbacon.simplediscordbot.commands.PingCommand;
 import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
 import net.dv8tion.jda.api.JDA;
@@ -16,7 +17,7 @@ public class Main {
 
         // Your Bot Token Goes Below
 
-        JDA bot = JDABuilder.createDefault("token")
+        JDA bot = JDABuilder.createDefault("MTA3MjUxODg3OTU5Njc3NzU0Mw.Ggk5a1.sWfBF9xDZx1RmEe3Szx6AGsjbZFm_q3hHpawAc")
 
                 // Sets Bot Activity
 
@@ -30,6 +31,7 @@ public class Main {
 
                 .addEventListeners(new PingCommand())
                 .addEventListeners(new JoinWelcomerListener())
+                .addEventListeners(new HelpCommand())
 
                 // Building The Bot
 
