@@ -26,9 +26,9 @@ public class JoinWelcomerListener extends ListenerAdapter{
 
         EmbedBuilder web = new EmbedBuilder();
         web.setColor(new Color(0, 255, 0));
-        web.setAuthor("WaterLand");
+        web.setAuthor("Welcome!");
         web.setThumbnail(event.getGuild().getIconUrl());
-        web.setDescription("Welcome to WaterLand :D \nHope you enjoy your time here!");
+        web.setDescription("Welcome to the discord server :D \nHope you enjoy your time here!");
 
         // Sends The Embed In The Users Dms
 
