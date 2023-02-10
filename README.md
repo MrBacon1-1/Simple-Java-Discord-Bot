@@ -6,7 +6,7 @@
   
  -  Download The Files As A Zip
  
- -  Open Using IntelliJ
+ -  Open Using IntelliJ or Other Code Editors
  
  -  In Main.java Put Your Discord Bots Token
  
