@@ -20,9 +20,21 @@ public class HelpCommand extends ListenerAdapter {
             // Embed Builder
 
             EmbedBuilder heb = new EmbedBuilder();
+            
+            // Change Color Below
+            
             heb.setColor(new Color(0, 255, 0));
+            
+            // // The Title/Author (shows on the top of the embed so it looks like a title)
+            
             heb.setAuthor("Discord Bot Commands");
+            
+            // Sets The Image On The Right To The Guild Logo
+            
             heb.setThumbnail(event.getGuild().getIconUrl());
+            
+            // The Main Body Of The Embed
+            
             heb.setDescription("`/ping` -> Gives some stats on the bot. \n`/help` -> Shows this menu.");
 
             // Sends Embed
