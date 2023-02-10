@@ -1,6 +1,7 @@
 package com.mrbacon.simplediscordbot;
 
-import com.mrbacon.simplediscordbot.Commands.Ping;
+import com.mrbacon.simplediscordbot.commands.PingCommand;
+import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -27,7 +28,8 @@ public class Main {
 
                 // Adding Listeners
 
-                .addEventListeners(new Ping())
+                .addEventListeners(new PingCommand())
+                .addEventListeners(new JoinWelcomerListener())
 
                 // Building The Bot
 
