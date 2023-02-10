@@ -12,7 +12,7 @@
  
  -  Make Sure Your Bot Has Server Member Intent Toggled On
  
- ![image](https://user-images.githubusercontent.com/105984061/218118696-ead8038a-a7ba-4618-9ee7-eb727e3201f1.png)
+ ![image](https://user-images.githubusercontent.com/105984061/218119028-1f267f94-e934-49b9-9307-c3df49c38097.png)
  
  - And Run The Project And All Should Work
 </p>
