@@ -10,9 +10,9 @@
  
  -  In Main.java put your discord bots token.
  
- -  Make sure your bot has server member intent toggled on.
+ -  Make sure your bot has all of these intent toggled on.
  
- ![image](https://user-images.githubusercontent.com/105984061/218119028-1f267f94-e934-49b9-9307-c3df49c38097.png)
+ ![image](https://user-images.githubusercontent.com/105984061/218180335-71f0213b-ec2f-49ed-a883-967160aa1f63.png)
  
  - And run the project, all should work
 </p>
