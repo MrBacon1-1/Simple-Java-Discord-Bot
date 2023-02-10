@@ -20,9 +20,21 @@ public class PingCommand extends ListenerAdapter {
             // Creates The Embed
 
             EmbedBuilder peb = new EmbedBuilder();
+            
+            // Change Color Below
+            
             peb.setColor(new Color(0, 255, 0));
+            
+            // The Title/Author (shows on the top of the embed so it looks like a title)
+            
             peb.setAuthor("Bot Stats");
+            
+            // Sets The Image On The Right To The Guild Logo
+            
             peb.setThumbnail(event.getGuild().getIconUrl());
+            
+            // The Main Body Of The Embed
+            
             peb.setDescription("Ping -> " + event.getJDA().getGatewayPing() + "ms");
 
             // Sends The Embed
