@@ -15,7 +15,7 @@ public class Main {
 
         // Your Bot Token Goes Below
 
-        JDA bot = JDABuilder.createDefault("MTA3MjUxODg3OTU5Njc3NzU0Mw.GqNreh.021lT4jx8c-3INp-Nibm6vSJXBAsfvOTem8Pkc")
+        JDA bot = JDABuilder.createDefault("token")
 
                 // Sets Bot Activity
 
