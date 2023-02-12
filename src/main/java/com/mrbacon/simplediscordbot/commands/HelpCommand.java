@@ -15,7 +15,7 @@ public class HelpCommand extends ListenerAdapter {
             // Prints In Console Who Used The Command
 
             String user = event.getUser().getId();
-            System.out.println("[?] The Help Command Has Been Used By -> " + user);
+            System.out.println("[Bot] The Help Command Has Been Used By -> " + user);
 
             // Embed Builder
 
