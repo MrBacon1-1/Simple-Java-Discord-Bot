@@ -15,7 +15,7 @@ public class PingCommand extends ListenerAdapter {
             // Prints In Console Who Used The Command
 
             String user = event.getUser().getId();
-            System.out.println("[?] The Ping Command Has Been Used By -> " + user);
+            System.out.println("[Bot] The Ping Command Has Been Used By -> " + user);
 
             // Creates The Embed
 
