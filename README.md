@@ -25,6 +25,8 @@
   - Has a help command. ❓
   
   - Has a ping command to get some data about the bot. ⚡
+  
+  - Has a coin flip command. 💲
 </p>
 <p align="center">
   <b>⭐More Coming Soon⭐</b><br><br>
