@@ -1,5 +1,6 @@
 package com.mrbacon.simplediscordbot;
 
+import com.mrbacon.simplediscordbot.commands.CoinFlipCommand;
 import com.mrbacon.simplediscordbot.commands.HelpCommand;
 import com.mrbacon.simplediscordbot.commands.PingCommand;
 import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
@@ -32,10 +33,17 @@ public class Main {
                 .addEventListeners(new PingCommand())
                 .addEventListeners(new JoinWelcomerListener())
                 .addEventListeners(new HelpCommand())
+                .addEventListeners(new CoinFlipCommand())
 
                 // Building The Bot
 
                 .build();
+
+        // Adding The Slash Command
+
+        bot.upsertCommand("ping", "Shows some data about the bot.").queue();
+        bot.upsertCommand("coinflip", "Flips a coin for you.").queue();
+        bot.upsertCommand("help", "The help command for WaterLand.").queue();
 
         // This Gets Printed When The Bot Is Ready/Loaded
 
