@@ -39,7 +39,7 @@ public class Main {
 
         // This Gets Printed When The Bot Is Ready/Loaded
 
-        System.out.println("Bot is up and running :D");
+        System.out.println("[Bot] Bot has successfully started");
 
     }
 }
