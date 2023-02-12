@@ -20,7 +20,7 @@ public class JoinWelcomerListener extends ListenerAdapter{
 
         // Prints This In Console
 
-        System.out.println("[+] New Member Joined -> " + user);
+        System.out.println("[Bot] New Member Joined -> " + user);
 
         // Embed Builder For The Embed It Will Dm The User Joining
 
