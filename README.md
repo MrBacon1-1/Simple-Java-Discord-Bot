@@ -27,6 +27,8 @@
   - Has a ping command to get some data about the bot. ⚡
   
   - Has a coin flip command. 💲
+  
+  - Has a stop command for the guild owner only. 🛑
 </p>
 <p align="center">
   <b>⭐More Coming Soon⭐</b><br><br>
