@@ -39,7 +39,7 @@ public class Main {
 
                 .build();
 
-        // Adding The Slash Command
+        // Adding The Slash Commands
 
         bot.upsertCommand("ping", "Shows some data about the bot.").queue();
         bot.upsertCommand("coinflip", "Flips a coin for you.").queue();
@@ -47,7 +47,7 @@ public class Main {
 
         // This Gets Printed When The Bot Is Ready/Loaded
 
-        System.out.println("[Bot] Bot has successfully started");
+        System.out.println("[Bot] Bot has successfully started!");
 
     }
 }
