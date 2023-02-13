@@ -3,6 +3,7 @@ package com.mrbacon.simplediscordbot;
 import com.mrbacon.simplediscordbot.commands.CoinFlipCommand;
 import com.mrbacon.simplediscordbot.commands.HelpCommand;
 import com.mrbacon.simplediscordbot.commands.PingCommand;
+import com.mrbacon.simplediscordbot.commands.StopCommand;
 import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -18,7 +19,7 @@ public class Main {
 
         // Your Bot Token Goes Below
 
-        JDA bot = JDABuilder.createDefault("token")
+        JDA bot = JDABuilder.createDefault("MTA3MjUxODg3OTU5Njc3NzU0Mw.GW2unX.3M9LvCZxQOa6DzkM1J3j3Y8r5pNUcLo_586R8g")
 
                 // Sets Bot Activity
 
@@ -34,6 +35,7 @@ public class Main {
                 .addEventListeners(new JoinWelcomerListener())
                 .addEventListeners(new HelpCommand())
                 .addEventListeners(new CoinFlipCommand())
+                .addEventListeners(new StopCommand())
 
                 // Building The Bot
 
@@ -44,6 +46,7 @@ public class Main {
         bot.upsertCommand("ping", "Shows some data about the bot.").queue();
         bot.upsertCommand("coinflip", "Flips a coin for you.").queue();
         bot.upsertCommand("help", "The help command for WaterLand.").queue();
+        bot.upsertCommand("stop", "Stops the bot (owner only)").queue();
 
         // This Gets Printed When The Bot Is Ready/Loaded
 

@@ -25,7 +25,7 @@ public class HelpCommand extends ListenerAdapter {
             
             heb.setColor(new Color(0, 255, 0));
             
-            // // The Title/Author (shows on the top of the embed so it looks like a title)
+            // The Title/Author (shows on the top of the embed so it looks like a title)
             
             heb.setAuthor("Discord Bot Commands");
             
@@ -35,7 +35,7 @@ public class HelpCommand extends ListenerAdapter {
             
             // The Main Body Of The Embed
             
-            heb.setDescription("`/ping` -> Gives some stats on the bot. \n`/help` -> Shows this menu. \n`/coinflip` -> Flips a coin for you.");
+            heb.setDescription("`/ping` -> Gives some stats on the bot. \n`/help` -> Shows this menu. \n`/coinflip` -> Flips a coin for you. \n`/stop` -> Stops the bot if you are the owner.");
 
             // Sends Embed
 
