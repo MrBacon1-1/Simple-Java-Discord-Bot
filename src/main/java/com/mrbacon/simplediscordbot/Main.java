@@ -1,9 +1,6 @@
 package com.mrbacon.simplediscordbot;
 
-import com.mrbacon.simplediscordbot.commands.CoinFlipCommand;
-import com.mrbacon.simplediscordbot.commands.HelpCommand;
-import com.mrbacon.simplediscordbot.commands.PingCommand;
-import com.mrbacon.simplediscordbot.commands.StopCommand;
+import com.mrbacon.simplediscordbot.commands.*;
 import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -36,6 +33,7 @@ public class Main {
                 .addEventListeners(new HelpCommand())
                 .addEventListeners(new CoinFlipCommand())
                 .addEventListeners(new StopCommand())
+                .addEventListeners(new MemberCountCommand())
 
                 // Building The Bot
 
@@ -47,6 +45,7 @@ public class Main {
         bot.upsertCommand("coinflip", "Flips a coin for you.").queue();
         bot.upsertCommand("help", "The help command for WaterLand.").queue();
         bot.upsertCommand("stop", "Stops the bot (owner only)").queue();
+        bot.upsertCommand("membercount", "Shows the amount of members in the guild").queue();
 
         // This Gets Printed When The Bot Is Ready/Loaded
 
