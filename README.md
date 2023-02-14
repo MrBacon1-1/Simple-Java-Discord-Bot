@@ -29,6 +29,8 @@
   - Has a coin flip command. 💲
   
   - Has a stop command for the guild owner only. 🛑
+  
+  - Has a member count command. 🔢
 </p>
 <p align="center">
   <b>⭐More Coming Soon⭐</b><br><br>
