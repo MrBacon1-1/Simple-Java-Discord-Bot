@@ -33,7 +33,7 @@ public class Main {
                 .addEventListeners(new HelpCommand())
                 .addEventListeners(new CoinFlipCommand())
                 .addEventListeners(new StopCommand())
-                .addEventListeners(new MemberCountCommand())
+                .addEventListeners(new ServerStatsCommand())
 
                 // Building The Bot
 
@@ -44,8 +44,8 @@ public class Main {
         bot.upsertCommand("ping", "Shows some data about the bot.").queue();
         bot.upsertCommand("coinflip", "Flips a coin for you.").queue();
         bot.upsertCommand("help", "The help command for WaterLand.").queue();
-        bot.upsertCommand("stop", "Stops the bot (owner only)").queue();
-        bot.upsertCommand("membercount", "Shows the amount of members in the guild").queue();
+        bot.upsertCommand("stop", "Stops the bot. (owner only)").queue();
+        bot.upsertCommand("serverstats", "Shows some information about the guild.").queue();
 
         // This Gets Printed When The Bot Is Ready/Loaded
 

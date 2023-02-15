@@ -6,15 +6,15 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import java.awt.*;
 
-public class MemberCountCommand extends ListenerAdapter {
+public class ServerStatsCommand extends ListenerAdapter {
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
-        if (event.getName().equals("membercount")) {
+        if (event.getName().equals("serverstats")) {
 
             // Prints In Console Who Used The Command
 
             String user = event.getUser().getId();
-            System.out.println("[Bot] The Member Count Command Has Been Used By -> " + user);
+            System.out.println("[Bot] The Server Stats Command Has Been Used By -> " + user);
 
             // Embed Builder
 
@@ -26,7 +26,7 @@ public class MemberCountCommand extends ListenerAdapter {
 
             // // The Title/Author (shows on the top of the embed so it looks like a title)
 
-            meb.setAuthor("Member Count");
+            meb.setAuthor("Server Stats");
 
             // Sets The Image On The Right To The Guild Logo
 
@@ -34,7 +34,7 @@ public class MemberCountCommand extends ListenerAdapter {
 
             // The Main Body Of The Embed
 
-            meb.setDescription("Members -> " + (event.getGuild().getMembers().size()));
+            meb.setDescription("Owner -> " + (event.getGuild().getOwner().getUser().getName()) + "\nMembers -> " + (event.getGuild().getMembers().size()) + "\nRoles -> " + (event.getGuild().getRoles().size()));
 
             // Sends Embed
 
