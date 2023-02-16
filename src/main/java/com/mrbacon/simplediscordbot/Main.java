@@ -2,6 +2,7 @@ package com.mrbacon.simplediscordbot;
 
 import com.mrbacon.simplediscordbot.commands.*;
 import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
+import com.mrbacon.simplediscordbot.logs.MessageRecievedLog;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -25,6 +26,7 @@ public class Main {
                 // Enabling Intents
 
                 .enableIntents(GatewayIntent.GUILD_MEMBERS)
+                .enableIntents(GatewayIntent.MESSAGE_CONTENT)
 
                 // Adding Listeners
 
@@ -34,6 +36,10 @@ public class Main {
                 .addEventListeners(new CoinFlipCommand())
                 .addEventListeners(new StopCommand())
                 .addEventListeners(new ServerStatsCommand())
+
+                // Logs
+
+                .addEventListeners(new MessageRecievedLog())
 
                 // Building The Bot
 

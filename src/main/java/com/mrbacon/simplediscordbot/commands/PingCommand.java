@@ -25,7 +25,7 @@ public class PingCommand extends ListenerAdapter {
             
             peb.setColor(new Color(0, 255, 0));
             
-            // The Title/Author (shows on the top of the embed so it looks like a title)
+            // The Title/Author
             
             peb.setAuthor("Bot Stats");
             

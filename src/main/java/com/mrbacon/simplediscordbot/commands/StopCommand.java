@@ -70,7 +70,7 @@ public class StopCommand extends ListenerAdapter {
 
                 seb2.setColor(new Color(0, 255, 0));
 
-                // The Title/Author (shows on the top of the embed so it looks like a title)
+                // The Title/Author
 
                 seb2.setAuthor("Stop Command");
 

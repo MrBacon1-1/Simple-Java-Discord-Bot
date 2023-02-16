@@ -32,7 +32,7 @@ public class CoinFlipCommand extends ListenerAdapter {
 
                 ceb.setColor(new Color(0, 255, 0));
 
-                // // The Title/Author (shows on the top of the embed so it looks like a title)
+                // // The Title/Author
 
                 ceb.setAuthor("Coin Flip");
 
