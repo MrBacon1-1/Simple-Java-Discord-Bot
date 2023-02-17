@@ -3,6 +3,7 @@ package com.mrbacon.simplediscordbot;
 import com.mrbacon.simplediscordbot.commands.*;
 import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
 import com.mrbacon.simplediscordbot.logs.MessageRecievedLog;
+import com.mrbacon.simplediscordbot.logs.SlashCommandLog;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -40,6 +41,7 @@ public class Main {
                 // Logs
 
                 .addEventListeners(new MessageRecievedLog())
+                .addEventListeners(new SlashCommandLog())
 
                 // Building The Bot
 
