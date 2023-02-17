@@ -31,6 +31,8 @@
   - Has a stop command for the guild owner only. 🛑
   
   - Has a member count command. 🔢
+  
+  - Customizable logs. 📋
 </p>
 <p align="center">
   <b>⭐More Coming Soon⭐</b><br><br>
