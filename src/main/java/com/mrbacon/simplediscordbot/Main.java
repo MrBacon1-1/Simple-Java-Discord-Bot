@@ -2,6 +2,8 @@ package com.mrbacon.simplediscordbot;
 
 import com.mrbacon.simplediscordbot.commands.*;
 import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
+import com.mrbacon.simplediscordbot.logs.ChannelCreateLog;
+import com.mrbacon.simplediscordbot.logs.MessageDeleteLog;
 import com.mrbacon.simplediscordbot.logs.MessageRecievedLog;
 import com.mrbacon.simplediscordbot.logs.SlashCommandLog;
 import net.dv8tion.jda.api.JDA;
@@ -42,6 +44,8 @@ public class Main {
 
                 .addEventListeners(new MessageRecievedLog())
                 .addEventListeners(new SlashCommandLog())
+                .addEventListeners(new ChannelCreateLog())
+                .addEventListeners(new MessageDeleteLog())
 
                 // Building The Bot
 
@@ -58,6 +62,5 @@ public class Main {
         // This Gets Printed When The Bot Is Ready/Loaded
 
         System.out.println("[Bot] Bot has successfully started!");
-
     }
 }

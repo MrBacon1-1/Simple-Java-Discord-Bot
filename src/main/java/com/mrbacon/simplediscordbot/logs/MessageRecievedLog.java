@@ -10,6 +10,7 @@ import java.awt.*;
 public class MessageRecievedLog extends ListenerAdapter {
 
     // Set To True If You Want It Enabled Else Delete The True And Leave It Empty
+
     String enabled = "";
 
     @Override
