@@ -1,6 +1,9 @@
 package com.mrbacon.simplediscordbot;
 
-import com.mrbacon.simplediscordbot.commands.*;
+import com.mrbacon.simplediscordbot.commands.administrator.*;
+import com.mrbacon.simplediscordbot.commands.bot.*;
+import com.mrbacon.simplediscordbot.commands.fun.*;
+import com.mrbacon.simplediscordbot.commands.server.*;
 import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
 import com.mrbacon.simplediscordbot.logs.ChannelCreateLog;
 import com.mrbacon.simplediscordbot.logs.MessageDeleteLog;

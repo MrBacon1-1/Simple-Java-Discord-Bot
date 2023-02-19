@@ -1,4 +1,4 @@
-package com.mrbacon.simplediscordbot.commands;
+package com.mrbacon.simplediscordbot.commands.server;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
