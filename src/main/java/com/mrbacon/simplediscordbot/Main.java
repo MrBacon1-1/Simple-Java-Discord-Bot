@@ -5,10 +5,7 @@ import com.mrbacon.simplediscordbot.commands.bot.*;
 import com.mrbacon.simplediscordbot.commands.fun.*;
 import com.mrbacon.simplediscordbot.commands.server.*;
 import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
-import com.mrbacon.simplediscordbot.logs.ChannelCreateLog;
-import com.mrbacon.simplediscordbot.logs.MessageDeleteLog;
-import com.mrbacon.simplediscordbot.logs.MessageRecievedLog;
-import com.mrbacon.simplediscordbot.logs.SlashCommandLog;
+import com.mrbacon.simplediscordbot.logs.*;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -49,6 +46,7 @@ public class Main {
                 .addEventListeners(new SlashCommandLog())
                 .addEventListeners(new ChannelCreateLog())
                 .addEventListeners(new MessageDeleteLog())
+                .addEventListeners(new ChannelDeleteLog())
 
                 // Building The Bot
 
