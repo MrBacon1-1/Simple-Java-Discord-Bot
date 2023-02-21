@@ -45,8 +45,9 @@ public class Main {
                 .addEventListeners(new MessageRecievedLog())
                 .addEventListeners(new SlashCommandLog())
                 .addEventListeners(new ChannelCreateLog())
-                .addEventListeners(new MessageDeleteLog())
+//                .addEventListeners(new MessageDeleteLog())
                 .addEventListeners(new ChannelDeleteLog())
+//                .addEventListeners(new MessageEditLog())
 
                 // Building The Bot
 
