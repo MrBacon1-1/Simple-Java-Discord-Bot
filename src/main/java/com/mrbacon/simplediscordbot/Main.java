@@ -8,7 +8,11 @@ import com.mrbacon.simplediscordbot.listeners.JoinWelcomerListener;
 import com.mrbacon.simplediscordbot.logs.*;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.interactions.commands.DefaultMemberPermissions;
+import net.dv8tion.jda.api.interactions.commands.OptionType;
+import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
 import javax.security.auth.login.LoginException;
@@ -20,7 +24,7 @@ public class Main {
 
         // Your Bot Token Goes Below
 
-        JDA bot = JDABuilder.createDefault("token")
+        JDA bot = JDABuilder.createDefault("")
 
                 // Sets Bot Activity
 
@@ -29,7 +33,6 @@ public class Main {
                 // Enabling Intents
 
                 .enableIntents(GatewayIntent.GUILD_MEMBERS)
-                .enableIntents(GatewayIntent.MESSAGE_CONTENT)
 
                 // Adding Listeners
 
@@ -39,6 +42,7 @@ public class Main {
                 .addEventListeners(new CoinFlipCommand())
                 .addEventListeners(new StopCommand())
                 .addEventListeners(new ServerStatsCommand())
+                .addEventListeners(new KickCommand())
 
                 // Logs
 
@@ -58,6 +62,12 @@ public class Main {
         bot.upsertCommand("help", "The help command for WaterLand.").queue();
         bot.upsertCommand("stop", "Stops the bot. (owner only)").queue();
         bot.upsertCommand("serverstats", "Shows some information about the guild.").queue();
+        bot.upsertCommand("kick", "Kicks a player from the guild.").addOptions(
+                new OptionData(OptionType.USER, "member", "The user you want to kick."),
+                new OptionData(OptionType.STRING, "reason", "Why do you want to kick them.")
+        ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.KICK_MEMBERS, Permission.ADMINISTRATOR)).queue();
+
+
 
         // This Gets Printed When The Bot Is Ready/Loaded
 
