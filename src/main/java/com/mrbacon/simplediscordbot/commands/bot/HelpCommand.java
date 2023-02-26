@@ -35,7 +35,7 @@ public class HelpCommand extends ListenerAdapter {
             
             // The Main Body Of The Embed
             
-            heb.setDescription("`/ping` -> Gives some stats on the bot. \n`/help` -> Shows this menu. \n`/coinflip` -> Flips a coin for you. \n`/stop` -> Stops the bot if you are the owner. \n`/serverstats` -> Shows some stats about the guild.");
+            heb.setDescription("`/help` -> Shows this menu. \n`/ping` -> Gives some stats on the bot. \n`/coinflip` -> Flips a coin for you. \n`/stop` -> Stops the bot if you are the owner. \n`/serverstats` -> Shows some stats about the guild.");
 
             // Sends Embed
 
