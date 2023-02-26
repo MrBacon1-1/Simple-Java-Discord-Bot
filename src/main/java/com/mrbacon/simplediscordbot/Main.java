@@ -71,6 +71,8 @@ public class Main {
 
         // This Gets Printed When The Bot Is Ready/Loaded
 
+        System.out.println("-----------------------------------");
         System.out.println("[Bot] Bot has successfully started!");
+        System.out.println("-----------------------------------");
     }
 }
