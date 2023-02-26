@@ -33,6 +33,8 @@
   - Has a member count command. 🔢
   
   - Customizable logs. 📋
+
+  - Has a kick command for staff. ✨
 </p>
 <p align="center">
   <b>⭐More Coming Soon⭐</b><br><br>
