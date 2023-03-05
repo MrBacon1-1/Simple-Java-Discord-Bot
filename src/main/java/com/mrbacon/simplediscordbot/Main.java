@@ -44,6 +44,7 @@ public class Main {
                 .addEventListeners(new StopCommand())
                 .addEventListeners(new ServerStatsCommand())
                 .addEventListeners(new KickCommand())
+                .addEventListeners(new BanCommand())
 
                 // Logs
 
