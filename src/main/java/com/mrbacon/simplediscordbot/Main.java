@@ -63,10 +63,15 @@ public class Main {
         bot.upsertCommand("help", "The help command for WaterLand.").queue();
         bot.upsertCommand("stop", "Stops the bot. (owner only)").queue();
         bot.upsertCommand("serverstats", "Shows some information about the guild.").queue();
-        bot.upsertCommand("kick", "Kicks a player from the guild.").addOptions(
+        bot.upsertCommand("kick", "Kicks a user from the guild.").addOptions(
                 new OptionData(OptionType.USER, "member", "The user you want to kick."),
                 new OptionData(OptionType.STRING, "reason", "Why do you want to kick them.")
         ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.KICK_MEMBERS, Permission.ADMINISTRATOR)).queue();
+        bot.upsertCommand("ban", "Bans a user from the guild.").addOptions(
+                new OptionData(OptionType.USER, "member", "The user you want to ban."),
+                new OptionData(OptionType.STRING, "reason", "Why do you want to ban them."),
+                new OptionData(OptionType.INTEGER, "time", "How long do you want to ban them for. ( In Mins )")
+        ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.BAN_MEMBERS, Permission.ADMINISTRATOR)).queue();
 
 
 
