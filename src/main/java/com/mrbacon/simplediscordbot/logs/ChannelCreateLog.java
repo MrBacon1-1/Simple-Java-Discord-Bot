@@ -13,35 +13,24 @@ public class ChannelCreateLog extends ListenerAdapter {
 
     String enabled = "";
 
+    // Channel You Want The Bot To Send The Message Received Logs To (Channel ID)
+
+    String channel = "";
+
     @Override
     public void onChannelCreate(ChannelCreateEvent event) {
 
         if (enabled.equals("true")) {
 
-            // Embed Builder
+            if (channel.equals("")) return;
 
             EmbedBuilder clogs = new EmbedBuilder();
-
-            // Change Color Below
-
             clogs.setColor(new Color(0, 255, 0));
-
-            // The Title/Author
-
             clogs.setAuthor("Channel Create Log");
-
-            // Sets The Image On The Right To The Guild Logo
-
             clogs.setThumbnail(event.getGuild().getIconUrl());
-
-            // The Main Body Of The Embed
-
             clogs.setDescription("Channel Name -> " + event.getChannel().getName() + "\nChannel Type -> " + event.getChannelType());
-            // Channel You Want The Bot To Send The Message Received Logs To
 
-            TextChannel txtChannel = event.getJDA().getTextChannelById("Channel ID");
-
-            // Sends Embed
+            TextChannel txtChannel = event.getJDA().getTextChannelById(channel);
 
             txtChannel.sendMessageEmbeds(clogs.build()).queue();
         }

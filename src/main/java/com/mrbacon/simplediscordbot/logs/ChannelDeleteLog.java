@@ -12,35 +12,24 @@ public class ChannelDeleteLog extends ListenerAdapter {
     // Set To True If You Want It Enabled Else Delete The True And Leave It Empty
 
     String enabled = "";
+
+    // Channel You Want The Bot To Send The Message Received Logs To
+
+    String channel = "";
     @Override
     public void onChannelDelete(ChannelDeleteEvent event) {
 
         if (enabled.equals("true")) {
 
-            // Embed Builder
+            if (channel.equals("")) return;
 
             EmbedBuilder cdlogs = new EmbedBuilder();
-
-            // Change Color Below
-
             cdlogs.setColor(new Color(255, 0, 0));
-
-            // The Title/Author
-
             cdlogs.setAuthor("Channel Delete Log");
-
-            // Sets The Image On The Right To The Guild Logo
-
             cdlogs.setThumbnail(event.getGuild().getIconUrl());
-
-            // The Main Body Of The Embed
-
             cdlogs.setDescription("Channel Name -> " + event.getChannel().getName() + "\nChannel Type -> " + event.getChannelType());
-            // Channel You Want The Bot To Send The Message Received Logs To
 
-            TextChannel txtChannel = event.getJDA().getTextChannelById("Channel ID");
-
-            // Sends Embed
+            TextChannel txtChannel = event.getJDA().getTextChannelById(channel);
 
             txtChannel.sendMessageEmbeds(cdlogs.build()).queue();
         }

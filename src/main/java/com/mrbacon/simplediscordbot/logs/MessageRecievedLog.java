@@ -13,6 +13,10 @@ public class MessageRecievedLog extends ListenerAdapter {
 
     String enabled = "";
 
+    // Channel You Want The Bot To Send The Message Received Logs To
+
+    String channel = "";
+
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
 
@@ -20,31 +24,15 @@ public class MessageRecievedLog extends ListenerAdapter {
 
         if (enabled.equals("true")) {
 
-            // Embed Builder
+            if (channel.equals("")) return;
 
             EmbedBuilder mlogs = new EmbedBuilder();
-
-            // Change Color Below
-
             mlogs.setColor(new Color(0, 255, 0));
-
-            // The Title/Author
-
             mlogs.setAuthor("Message Sent Logs");
-
-            // Sets The Image On The Right To The Guild Logo
-
             mlogs.setThumbnail(event.getGuild().getIconUrl());
-
-            // The Main Body Of The Embed
-
             mlogs.setDescription("Sender -> " + event.getMessage().getAuthor().getName() + "\nMessage -> " + event.getMessage().getContentRaw() + "\nSent In -> " + event.getMessage().getChannel().getName());
 
-            // Channel You Want The Bot To Send The Message Received Logs To
-
-            TextChannel txtChannel = event.getJDA().getTextChannelById("Channel ID");
-
-            // Sends Embed
+            TextChannel txtChannel = event.getJDA().getTextChannelById(channel);
 
             txtChannel.sendMessageEmbeds(mlogs.build()).queue();
         }

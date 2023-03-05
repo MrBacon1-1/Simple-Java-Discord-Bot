@@ -33,6 +33,7 @@ public class Main {
                 // Enabling Intents
 
                 .enableIntents(GatewayIntent.GUILD_MEMBERS)
+                .enableIntents(GatewayIntent.MESSAGE_CONTENT)
 
                 // Adding Listeners
 

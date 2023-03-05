@@ -13,36 +13,24 @@ public class SlashCommandLog extends ListenerAdapter {
 
     String enabled = "";
 
+    // Channel You Want The Bot To Send The Message Received Logs To
+
+    String channel = "";
+
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
 
         if (enabled.equals("true")) {
 
-            // Embed Builder
+            if (channel.equals("")) return;
 
             EmbedBuilder slogs = new EmbedBuilder();
-
-            // Change Color Below
-
             slogs.setColor(new Color(0, 255, 0));
-
-            // The Title/Author
-
             slogs.setAuthor("Slash Command Logs");
-
-            // Sets The Image On The Right To The Guild Logo
-
             slogs.setThumbnail(event.getGuild().getIconUrl());
-
-            // The Main Body Of The Embed
-
             slogs.setDescription("Sender -> " + event.getMember().getUser().getName() + "\nCommand -> " + event.getName() + "\nSent In -> " + event.getChannel().getName());
 
-            // Channel You Want The Bot To Send The Message Received Logs To
-
-            TextChannel txtChannel = event.getJDA().getTextChannelById("Channel ID");
-
-            // Sends Embed
+            TextChannel txtChannel = event.getJDA().getTextChannelById(channel);
 
             txtChannel.sendMessageEmbeds(slogs.build()).queue();
 

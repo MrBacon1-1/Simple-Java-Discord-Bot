@@ -9,40 +9,17 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import java.awt.Color;
 
 public class JoinWelcomerListener extends ListenerAdapter{
-
-    // When A Member Joins
     @Override
     public void onGuildMemberJoin(GuildMemberJoinEvent event) {
 
-        // Gets The Users ID
-
         String user = event.getMember().getUser().getId();
-
-        // Prints This In Console
-
         System.out.println("[Bot] New Member Joined -> " + user);
 
-        // Embed Builder
-
         EmbedBuilder web = new EmbedBuilder();
-        
-        // Change color below
-        
         web.setColor(new Color(0, 255, 0));
-        
-        // The Title/Author
-        
         web.setAuthor("Welcome!");
-        
-        // Sets The Image On The Right To The Guild Logo
-        
         web.setThumbnail(event.getGuild().getIconUrl());
-        
-        // The Main Body Of The Embed
-        
         web.setDescription("Welcome to the discord server :D \nHope you enjoy your time here!");
-
-        // Sends The Embed In The Users Dms
 
         sendMessage(event.getUser(), web.build());
     }

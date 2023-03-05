@@ -12,32 +12,14 @@ public class PingCommand extends ListenerAdapter {
 
         if (event.getName().equals("ping")) {
 
-            // Prints In Console Who Used The Command
-
             String user = event.getUser().getId();
             System.out.println("[Bot] The Ping Command Has Been Used By -> " + user);
 
-            // Creates The Embed
-
             EmbedBuilder peb = new EmbedBuilder();
-            
-            // Change Color Below
-            
             peb.setColor(new Color(0, 255, 0));
-            
-            // The Title/Author
-            
             peb.setAuthor("Bot Stats");
-            
-            // Sets The Image On The Right To The Guild Logo
-            
             peb.setThumbnail(event.getGuild().getIconUrl());
-            
-            // The Main Body Of The Embed
-            
             peb.setDescription("Ping -> " + event.getJDA().getGatewayPing() + "ms");
-
-            // Sends The Embed
 
             event.replyEmbeds(peb.build()).queue();
         }
