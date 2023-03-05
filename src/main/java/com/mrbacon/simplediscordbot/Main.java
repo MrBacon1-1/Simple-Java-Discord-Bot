@@ -34,6 +34,7 @@ public class Main {
 
                 .enableIntents(GatewayIntent.GUILD_MEMBERS)
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT)
+                .enableIntents(GatewayIntent.GUILD_BANS)
 
                 // Adding Listeners
 
