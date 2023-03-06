@@ -15,16 +15,29 @@ public class KickCommand extends ListenerAdapter {
             String kuser = event.getOption("member").getAsString();
             String reason = event.getOption("reason").getAsString();
 
-            if (event.getGuild().getOwner().getId().equals(kuser)) return;
+            if (event.getGuild().getOwner().getId().equals(kuser)) {
+
+                String user = event.getUser().getId();
+                System.out.println("[Bot] The Kick Command Has Been Used By -> " + user);
+
+                EmbedBuilder keb = new EmbedBuilder();
+                keb.setColor(new Color(255, 0, 0));
+                keb.setAuthor("Kick Command");
+                keb.setThumbnail(event.getGuild().getIconUrl());
+                keb.setDescription("You Can Not Kick The Owner!");
+
+                event.replyEmbeds(keb.build()).queue();
+
+            }
+
+            event.getGuild().kick(UserSnowflake.fromId((kuser)), (reason)).queue();
 
             String user = event.getUser().getId();
             System.out.println("[Bot] The Kick Command Has Been Used By -> " + user);
 
-            event.getGuild().kick(UserSnowflake.fromId((kuser)), (reason)).queue();
-
             EmbedBuilder keb = new EmbedBuilder();
             keb.setColor(new Color(255, 0, 0));
-            keb.setAuthor("Discord Bot Commands");
+            keb.setAuthor("Kick Command");
             keb.setThumbnail(event.getGuild().getIconUrl());
             keb.setDescription("User Has Been Kicked Successfully.");
 

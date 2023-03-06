@@ -19,7 +19,7 @@ public class HelpCommand extends ListenerAdapter {
             heb.setColor(new Color(0, 255, 0));
             heb.setAuthor("Discord Bot Commands");
             heb.setThumbnail(event.getGuild().getIconUrl());
-            heb.setDescription("`/help` -> Shows this menu. \n`/ping` -> Gives some stats on the bot. \n`/coinflip` -> Flips a coin for you. \n`/stop` -> Stops the bot if you are the owner. \n`/serverstats` -> Shows some stats about the guild.");
+            heb.setDescription("`/help` -> Shows this menu. \n`/ping` -> Gives some stats on the bot. \n`/coinflip` -> Flips a coin for you. \n`/stop` -> Stops the bot if you are the owner. \n`/serverstats` -> Shows some stats about the guild. \n`kick` -> Kicks a user you select.");
 
             event.replyEmbeds(heb.build()).queue();
         }
