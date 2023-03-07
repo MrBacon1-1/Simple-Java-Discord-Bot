@@ -41,5 +41,6 @@
 </p>
 </p>
 <p align="center">
-  <b>❓If You Need Help Contact Me MrBacon#7458❓</b><br><br>
+  <b>❓If You Need Help Contact Me MrBacon#7458❓</b><br><br> 
+  - Ban Command Is Currently Disabled 🟥
 </p>
