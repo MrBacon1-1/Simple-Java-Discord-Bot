@@ -17,9 +17,6 @@ public class KickCommand extends ListenerAdapter {
 
             if (event.getGuild().getOwner().getId().equals(kuser)) {
 
-                String user = event.getUser().getId();
-                System.out.println("[Bot] The Kick Command Has Been Used By -> " + user);
-
                 EmbedBuilder keb = new EmbedBuilder();
                 keb.setColor(new Color(255, 0, 0));
                 keb.setAuthor("Kick Command");
