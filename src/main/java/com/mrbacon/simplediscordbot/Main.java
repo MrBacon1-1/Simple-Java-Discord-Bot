@@ -46,6 +46,7 @@ public class Main {
                 .addEventListeners(new ServerStatsCommand())
                 .addEventListeners(new KickCommand())
 //                .addEventListeners(new BanCommand())
+                .addEventListeners(new EightBallCommand())
 
                 // Logs
 
@@ -63,6 +64,7 @@ public class Main {
         bot.upsertCommand("ping", "Shows some data about the bot.").queue();
         bot.upsertCommand("coinflip", "Flips a coin for you.").queue();
         bot.upsertCommand("help", "The help command for WaterLand.").queue();
+        bot.upsertCommand("8ball", "A 8ball Command.").queue();
         bot.upsertCommand("stop", "Stops the bot. (owner only)").queue();
         bot.upsertCommand("serverstats", "Shows some information about the guild.").queue();
         bot.upsertCommand("kick", "Kicks a user from the guild.").addOptions(
