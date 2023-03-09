@@ -45,7 +45,7 @@ public class Main {
                 .addEventListeners(new StopCommand())
                 .addEventListeners(new ServerStatsCommand())
                 .addEventListeners(new KickCommand())
-//                .addEventListeners(new BanCommand())
+                .addEventListeners(new BanCommand())
                 .addEventListeners(new EightBallCommand())
 
                 // Logs
@@ -71,11 +71,10 @@ public class Main {
                 new OptionData(OptionType.USER, "member", "The user you want to kick."),
                 new OptionData(OptionType.STRING, "reason", "Why do you want to kick them.")
         ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.KICK_MEMBERS, Permission.ADMINISTRATOR)).queue();
-//        bot.upsertCommand("ban", "Bans a user from the guild.").addOptions(
-//                new OptionData(OptionType.USER, "member", "The user you want to ban."),
-//                new OptionData(OptionType.STRING, "reason", "Why do you want to ban them."),
-//                new OptionData(OptionType.INTEGER, "time", "How long do you want to ban them for. ( In Mins )")
-//        ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.BAN_MEMBERS, Permission.ADMINISTRATOR)).queue();
+        bot.upsertCommand("ban", "Bans a user from the guild.").addOptions(
+                new OptionData(OptionType.USER, "member", "The user you want to ban."),
+                new OptionData(OptionType.STRING, "reason", "Why do you want to ban them.")
+        ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.BAN_MEMBERS, Permission.ADMINISTRATOR)).queue();
 
 
 
