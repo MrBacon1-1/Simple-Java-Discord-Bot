@@ -34,7 +34,7 @@
   
   - Customizable logs. 📋
 
-  - Has a kick command for staff. ✨
+  - Has a kick & ban command for staff. ✨
 </p>
 <p align="center">
   <b>⭐More Coming Soon⭐</b><br><br>
