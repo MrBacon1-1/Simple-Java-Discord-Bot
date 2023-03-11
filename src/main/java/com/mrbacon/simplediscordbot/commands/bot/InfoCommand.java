@@ -17,7 +17,7 @@ public class InfoCommand extends ListenerAdapter {
 
             EmbedBuilder ieb = new EmbedBuilder();
             ieb.setColor(new Color(0, 255, 0));
-            ieb.setAuthor("Bot/Guild Info");
+            ieb.setAuthor("Guild Info");
             ieb.setThumbnail(event.getGuild().getIconUrl());
             ieb.setDescription("Guild Name -> " + event.getGuild().getName() + "\nGuild ID -> " + event.getGuild().getId() + "\nNSFW? -> " + event.getGuild().getNSFWLevel() + "\nMembers -> " + event.getGuild().getMemberCount());
 
