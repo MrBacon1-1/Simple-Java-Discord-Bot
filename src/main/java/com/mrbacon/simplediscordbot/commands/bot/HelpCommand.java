@@ -17,7 +17,7 @@ public class HelpCommand extends ListenerAdapter {
 
             EmbedBuilder heb = new EmbedBuilder();
             heb.setColor(new Color(0, 255, 0));
-            heb.setAuthor("Discord Bot Commands");
+                heb.setAuthor("Help Command");
             heb.setThumbnail(event.getGuild().getIconUrl());
             heb.setDescription("`/help` -> Shows this menu. \n`/ping` -> Gives some stats on the bot. \n`/coinflip` -> Flips a coin for you. \n`/stop` -> Stops the bot if you are the owner. \n`/serverstats` -> Shows some stats about the guild. \n`/kick` -> Kicks a user from the guild. \n`/ban` -> Bans a user from the guild. \n`8ball` -> Gives you a random output. e.g `Maybe, Yes, No`");
 

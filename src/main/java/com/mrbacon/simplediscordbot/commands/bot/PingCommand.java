@@ -17,7 +17,7 @@ public class PingCommand extends ListenerAdapter {
 
             EmbedBuilder peb = new EmbedBuilder();
             peb.setColor(new Color(0, 255, 0));
-            peb.setAuthor("Bot Stats");
+            peb.setAuthor("Ping -> Pong :D");
             peb.setThumbnail(event.getGuild().getIconUrl());
             peb.setDescription("Ping -> " + event.getJDA().getGatewayPing() + "ms");
 
