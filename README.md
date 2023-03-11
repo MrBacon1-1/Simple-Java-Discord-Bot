@@ -24,6 +24,8 @@
   
   - Has a help command. ❓
   
+  - Has a info command that shows inf oabout the guild. ❓
+  
   - Has a ping command to get some data about the bot. ⚡
   
   - Has a coin flip command. 💲
