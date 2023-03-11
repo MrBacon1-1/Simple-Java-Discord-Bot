@@ -14,7 +14,7 @@
  
  ![image](https://user-images.githubusercontent.com/105984061/218180335-71f0213b-ec2f-49ed-a883-967160aa1f63.png)
  
- - And run the project, all should work
+ - And run the project, all should work (From Main.java)
 </p>
 
 <p align="center">
