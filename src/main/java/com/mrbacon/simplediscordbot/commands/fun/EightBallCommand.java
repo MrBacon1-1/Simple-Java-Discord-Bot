@@ -13,6 +13,8 @@ public class EightBallCommand extends ListenerAdapter {
 
         if (event.getName().equals("8ball")) {
 
+            // 8ball Command
+
             String user = event.getUser().getId();
             System.out.println("[Bot] The 8Ball Command Has Been Used By -> " + user);
 

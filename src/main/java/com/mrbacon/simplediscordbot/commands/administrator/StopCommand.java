@@ -12,6 +12,8 @@ public class StopCommand extends ListenerAdapter {
 
         if (event.getName().equals("stop")) {
 
+            // Stop Command
+
             String owner = event.getGuild().getOwnerId();
             String user = event.getMember().getUser().getId();
             System.out.println("[Bot] The Stop Command Has Been Used By -> " + user);

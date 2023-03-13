@@ -12,6 +12,8 @@ public class KickCommand extends ListenerAdapter {
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
         if (event.getName().equals("kick")) {
 
+            // Kick Command
+
             String kuser = event.getOption("member").getAsString();
             String reason = event.getOption("reason").getAsString();
 

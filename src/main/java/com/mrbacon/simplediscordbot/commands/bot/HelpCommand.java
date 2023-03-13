@@ -12,6 +12,8 @@ public class HelpCommand extends ListenerAdapter {
 
         if (event.getName().equals("help")) {
 
+            // Help Command
+
             String user = event.getUser().getId();
             System.out.println("[Bot] The Help Command Has Been Used By -> " + user);
 

@@ -11,6 +11,8 @@ public class ServerStatsCommand extends ListenerAdapter {
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
         if (event.getName().equals("serverstats")) {
 
+            // Server Stats Command
+
             String user = event.getUser().getId();
             System.out.println("[Bot] The Server Stats Command Has Been Used By -> " + user);
 

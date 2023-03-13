@@ -12,6 +12,8 @@ public class PingCommand extends ListenerAdapter {
 
         if (event.getName().equals("ping")) {
 
+            // Ping Command
+
             String user = event.getUser().getId();
             System.out.println("[Bot] The Ping Command Has Been Used By -> " + user);
 

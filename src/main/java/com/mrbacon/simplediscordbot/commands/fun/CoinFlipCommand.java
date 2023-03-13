@@ -13,6 +13,8 @@ public class CoinFlipCommand extends ListenerAdapter {
 
         if (event.getName().equals("coinflip")) {
 
+            // Coin-flip Command
+
             String user = event.getUser().getId();
             System.out.println("[Bot] The Coin Flip Command Has Been Used By -> " + user);
 

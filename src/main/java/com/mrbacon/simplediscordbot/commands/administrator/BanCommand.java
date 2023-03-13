@@ -14,6 +14,8 @@ public class BanCommand extends ListenerAdapter {
 
         if (event.getName().equals("ban"));
 
+        // Ban Command
+
         String buser = event.getOption("member").getAsString();
         String reason = event.getOption("reason").getAsString();
 
