@@ -24,7 +24,7 @@ public class Main {
 
         // Your Bot Token Goes Below
 
-        JDA bot = JDABuilder.createDefault("token")
+        JDA bot = JDABuilder.createDefault("")
 
                 // Sets Bot Activity
 
@@ -48,6 +48,7 @@ public class Main {
                 .addEventListeners(new BanCommand())
                 .addEventListeners(new EightBallCommand())
                 .addEventListeners(new InfoCommand())
+                .addEventListeners(new AddRoleCommand())
 
                 // Logs
 
@@ -77,6 +78,10 @@ public class Main {
                 new OptionData(OptionType.USER, "member", "The user you want to ban."),
                 new OptionData(OptionType.STRING, "reason", "Why do you want to ban them.")
         ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.BAN_MEMBERS, Permission.ADMINISTRATOR)).queue();
+        bot.upsertCommand("addrole", "Adds a role to a user.").addOptions(
+                new OptionData(OptionType.USER, "member", "The user you want to give the role to."),
+                new OptionData(OptionType.ROLE, "role", "What role you want to give them.")
+        ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.MANAGE_ROLES, Permission.ADMINISTRATOR)).queue();
 
 
 
