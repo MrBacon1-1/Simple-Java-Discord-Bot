@@ -14,6 +14,8 @@ public class AddRoleCommand extends ListenerAdapter {
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
 
         if (event.getName().equals("addrole")) {
+            
+            // Add Role Command
 
             String user = event.getOption("member").getAsString();
             Role role = event.getOption("role").getAsRole();
