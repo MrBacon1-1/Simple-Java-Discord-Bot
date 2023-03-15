@@ -37,6 +37,8 @@
   - Customizable logs. 📋
 
   - Has a kick & ban command for staff. ✨
+  
+  - Add & Remove role command for administrators.🛠
 </p>
 <p align="center">
   <b>⭐More Coming Soon⭐</b><br><br>
