@@ -12,7 +12,7 @@ public class GuildInfoCommand extends ListenerAdapter {
 
         if (event.getName().equals("guildinfo")) {
 
-            // Info Command
+            // Guild Info Command
 
             String user = event.getUser().getId();
             System.out.println("[Bot] The Info Command Has Been Used By -> " + user);
