@@ -36,7 +36,7 @@ public class Main {
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT)
                 .enableIntents(GatewayIntent.GUILD_BANS)
 
-                // Adding Listeners
+                // Adding Listeners/Command
 
                 .addEventListeners(new PingCommand())
                 .addEventListeners(new JoinWelcomerListener())
