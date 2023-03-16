@@ -47,7 +47,7 @@ public class Main {
                 .addEventListeners(new KickCommand())
                 .addEventListeners(new BanCommand())
                 .addEventListeners(new EightBallCommand())
-                .addEventListeners(new ServerInfoCommand())
+                .addEventListeners(new GuildInfoCommand())
                 .addEventListeners(new AddRoleCommand())
                 .addEventListeners(new RemoveRoleCommand())
 
