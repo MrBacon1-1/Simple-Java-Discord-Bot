@@ -7,31 +7,30 @@ import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEve
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import java.awt.*;
-import java.util.Objects;
 
-public class AddRoleCommand extends ListenerAdapter {
+public class RemoveRoleCommand extends ListenerAdapter {
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
 
-        if (event.getName().equals("addrole")) {
-            
-            // Add Role Command
+        if (event.getName().equals("removerole")) {
+
+            // Remove Role Command
 
             String user = event.getOption("member").getAsString();
             Role role = event.getOption("role").getAsRole();
 
             try {
 
-                event.getGuild().addRoleToMember(UserSnowflake.fromId(user), (role)).queue();
+                event.getGuild().removeRoleFromMember(UserSnowflake.fromId(user), (role)).queue();
 
                 String cuser = event.getUser().getId();
-                System.out.println("[Bot] The Role Add Command Has Been Used By -> " + cuser + "\n[Bot] The Role Is -> " + role);
+                System.out.println("[Bot] The Role Remove Command Has Been Used By -> " + cuser + "\n[Bot] The Role Is -> " + role);
 
                 EmbedBuilder emb = new EmbedBuilder();
                 emb.setColor(new Color(0, 255, 0));
-                emb.setAuthor("Role Added!");
+                emb.setAuthor("Role Removed!");
                 emb.setThumbnail(event.getGuild().getIconUrl());
-                emb.setDescription("The user has received the role.");
+                emb.setDescription("The role has been removed from the user.");
 
                 event.replyEmbeds(emb.build()).queue();
 
@@ -41,10 +40,9 @@ public class AddRoleCommand extends ListenerAdapter {
                 emb.setColor(new Color(255, 0, 0));
                 emb.setAuthor("Error!");
                 emb.setThumbnail(event.getGuild().getIconUrl());
-                emb.setDescription("A error occurred while trying to give the user the role!");
+                emb.setDescription("A error occurred while trying to remove the role from the user!");
 
                 event.replyEmbeds(emb.build()).queue();
-
             }
         }
     }

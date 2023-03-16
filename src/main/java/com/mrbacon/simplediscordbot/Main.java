@@ -24,7 +24,7 @@ public class Main {
 
         // Your Bot Token Goes Below
 
-        JDA bot = JDABuilder.createDefault("")
+        JDA bot = JDABuilder.createDefault("token")
 
                 // Sets Bot Activity
 
@@ -49,6 +49,7 @@ public class Main {
                 .addEventListeners(new EightBallCommand())
                 .addEventListeners(new InfoCommand())
                 .addEventListeners(new AddRoleCommand())
+                .addEventListeners(new RemoveRoleCommand())
 
                 // Logs
 
@@ -81,6 +82,10 @@ public class Main {
         bot.upsertCommand("addrole", "Adds a role to a user.").addOptions(
                 new OptionData(OptionType.USER, "member", "The user you want to give the role to."),
                 new OptionData(OptionType.ROLE, "role", "What role you want to give them.")
+        ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.MANAGE_ROLES, Permission.ADMINISTRATOR)).queue();
+        bot.upsertCommand("removerole", "Removes a role from a user.").addOptions(
+                new OptionData(OptionType.USER, "member", "The user you want to take away the role from."),
+                new OptionData(OptionType.ROLE, "role", "What role you want to take away.")
         ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.MANAGE_ROLES, Permission.ADMINISTRATOR)).queue();
 
 
