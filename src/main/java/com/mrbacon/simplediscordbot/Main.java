@@ -28,7 +28,7 @@ public class Main {
 
                 // Sets Bot Activity
 
-                .setActivity(Activity.watching("MrBacon"))
+                .setActivity(Activity.watching("MrBacon#7458"))
 
                 // Enabling Intents
 
