@@ -1,5 +1,5 @@
 <h1 align="center">Simple Java Discord Bot</h1>
-<h3 align="center">This is a simple discord bto coded in Java</h3>
+<h3 align="center">This is a simple discord bot coded in Java</h3>
 
 <p align="center">
   <b>~ ❓ How To Use ❓ ~</b><br><br>
