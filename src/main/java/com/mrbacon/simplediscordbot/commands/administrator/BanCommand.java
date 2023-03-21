@@ -6,7 +6,6 @@ import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEve
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import java.awt.*;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class BanCommand extends ListenerAdapter {
@@ -32,7 +31,7 @@ public class BanCommand extends ListenerAdapter {
 
         }else {
 
-            event.getGuild().ban(UserSnowflake.fromId(buser), (999999999), (TimeUnit.DAYS)).queue();
+            event.getGuild().ban(UserSnowflake.fromId(buser), (7), (TimeUnit.DAYS)).queue();
 
             String user = event.getUser().getId();
             System.out.println("[Bot] The Ban Command Has Been Used By -> " + user);
