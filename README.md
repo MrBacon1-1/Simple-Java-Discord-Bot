@@ -46,5 +46,6 @@
 </p>
 <p align="center">
   <b>❓If You Need Help Contact Me MrBacon#7458❓</b><br>
+    
     - The bot should be in working condition but there are a few null errors i need to fix (they do bot impact anything they just spam console when certain commands are run)
 </p>
