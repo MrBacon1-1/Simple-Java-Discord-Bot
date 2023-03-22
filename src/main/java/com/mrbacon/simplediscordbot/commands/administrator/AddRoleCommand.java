@@ -16,7 +16,7 @@ public class AddRoleCommand extends ListenerAdapter {
             
             // Add Role Command
 
-            String user = event.getOption("member").getAsString();
+            String user = event.getOption("member").getAsUser().getId();
             Role role = event.getOption("role").getAsRole();
 
             try {

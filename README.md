@@ -36,9 +36,10 @@
   
   - Customizable logs. 📋
 
-  - Has a kick & ban command for staff. ✨
+  - Has a kick & ban & timeout command for staff. ✨
   
   - Add & Remove role command for administrators.🛠
+
 </p>
 <p align="center">
   <b>⭐More Coming Soon⭐</b><br><br>
@@ -46,6 +47,5 @@
 </p>
 <p align="center">
   <b>❓If You Need Help Contact Me MrBacon#7458❓</b><br><br>
-    
-  - The bot should be in working condition but there are a few null errors i need to fix (they do bot impact anything they just spam console when certain commands are run)
+  <b>🟢The bot should be in working condition🟢</b><br><br>
 </p>

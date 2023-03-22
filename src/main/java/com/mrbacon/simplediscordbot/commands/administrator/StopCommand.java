@@ -37,7 +37,7 @@ public class StopCommand extends ListenerAdapter {
             } else {
 
                 EmbedBuilder seb2 = new EmbedBuilder();
-                seb2.setColor(new Color(0, 255, 0));
+                seb2.setColor(new Color(255, 0, 0));
                 seb2.setAuthor("Stop Command");
                 seb2.setThumbnail(event.getGuild().getIconUrl());
 

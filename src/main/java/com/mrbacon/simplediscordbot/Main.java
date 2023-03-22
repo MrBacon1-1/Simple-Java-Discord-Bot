@@ -50,6 +50,7 @@ public class Main {
                 .addEventListeners(new GuildInfoCommand())
                 .addEventListeners(new AddRoleCommand())
                 .addEventListeners(new RemoveRoleCommand())
+                .addEventListeners(new TimeoutCommand())
 
                 // Logs
 
@@ -79,6 +80,10 @@ public class Main {
                 new OptionData(OptionType.USER, "member", "The user you want to ban."),
                 new OptionData(OptionType.STRING, "reason", "Why do you want to ban them.")
         ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.BAN_MEMBERS, Permission.ADMINISTRATOR)).queue();
+        bot.upsertCommand("timeout", "Timeouts a user of the guild.").addOptions(
+                new OptionData(OptionType.USER, "member", "The user you want to timeout."),
+                new OptionData(OptionType.STRING, "time", "How long you want to time them out for. (minutes)")
+        ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.ADMINISTRATOR)).queue();
         bot.upsertCommand("addrole", "Adds a role to a user.").addOptions(
                 new OptionData(OptionType.USER, "member", "The user you want to give the role to."),
                 new OptionData(OptionType.ROLE, "role", "What role you want to give them.")
