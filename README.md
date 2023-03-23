@@ -39,7 +39,10 @@
   - Has a kick & ban & timeout command for staff. ✨
   
   - Add & Remove role command for administrators.🛠
-
+</p>
+<p align="center">
+  <b>Feel Free To Edit & Customize The Bot Yourself :D</b><br><br>
+</p>
 </p>
 <p align="center">
   <b>⭐More Coming Soon⭐</b><br><br>
