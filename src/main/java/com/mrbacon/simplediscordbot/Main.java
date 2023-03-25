@@ -51,6 +51,7 @@ public class Main {
                 .addEventListeners(new AddRoleCommand())
                 .addEventListeners(new RemoveRoleCommand())
                 .addEventListeners(new TimeoutCommand())
+                .addEventListeners(new RemoveTimeoutCommand())
 
                 // Logs
 
@@ -92,6 +93,9 @@ public class Main {
                 new OptionData(OptionType.USER, "member", "The user you want to take away the role from."),
                 new OptionData(OptionType.ROLE, "role", "What role you want to take away.")
         ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.MANAGE_ROLES, Permission.ADMINISTRATOR)).queue();
+        bot.upsertCommand("removetimeout", "Remove a users timeout.").addOptions(
+                new OptionData(OptionType.USER, "member", "The user you want to remove the timeout of.")
+        ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.ADMINISTRATOR)).queue();
 
 
 
