@@ -52,6 +52,7 @@ public class Main {
                 .addEventListeners(new RemoveRoleCommand())
                 .addEventListeners(new TimeoutCommand())
                 .addEventListeners(new RemoveTimeoutCommand())
+                .addEventListeners(new UnbanCommand())
 
                 // Logs
 
@@ -80,6 +81,10 @@ public class Main {
         bot.upsertCommand("ban", "Bans a user from the guild.").addOptions(
                 new OptionData(OptionType.USER, "member", "The user you want to ban."),
                 new OptionData(OptionType.STRING, "reason", "Why do you want to ban them.")
+        ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.BAN_MEMBERS, Permission.ADMINISTRATOR)).queue();
+        bot.upsertCommand("unban", "Unbans a user from the guild.").addOptions(
+                new OptionData(OptionType.STRING, "member", "The user you want to unban. (ID)"),
+                new OptionData(OptionType.STRING, "reason", "Why do you want to unban them.")
         ).setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.BAN_MEMBERS, Permission.ADMINISTRATOR)).queue();
         bot.upsertCommand("timeout", "Timeouts a user of the guild.").addOptions(
                 new OptionData(OptionType.USER, "member", "The user you want to timeout."),
