@@ -13,6 +13,8 @@ public class UnbanCommand extends ListenerAdapter {
 
         if (event.getName().equals("unban")) {
 
+            // Unban Command
+
             String target = event.getOption("member").getAsString();
             String reason = event.getOption("reason").getAsString();
 

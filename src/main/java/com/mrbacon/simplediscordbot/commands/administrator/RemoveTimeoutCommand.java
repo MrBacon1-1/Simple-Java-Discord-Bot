@@ -14,6 +14,8 @@ public class RemoveTimeoutCommand extends ListenerAdapter {
         
         if (event.getName().equals("removetimeout")) {
 
+            // Remove Timeout Command
+
             String tuser = event.getOption("member").getAsUser().getId();
 
             if (event.getGuild().getOwner().getId().equals(tuser)) {

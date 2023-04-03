@@ -53,6 +53,7 @@ public class Main {
                 .addEventListeners(new TimeoutCommand())
                 .addEventListeners(new RemoveTimeoutCommand())
                 .addEventListeners(new UnbanCommand())
+                .addEventListeners(new RandomNumGen())
 
                 // Logs
 
@@ -74,6 +75,10 @@ public class Main {
         bot.upsertCommand("8ball", "A 8ball Command.").queue();
         bot.upsertCommand("stop", "Stops the bot. (owner only)").queue();
         bot.upsertCommand("serverstats", "Shows some information about the guild.").queue();
+        bot.upsertCommand("randomnum","Generates a random number for you.").addOptions(
+                new OptionData(OptionType.INTEGER, "min", "Minimum number."),
+                new OptionData(OptionType.INTEGER, "max", "Maximum number.")
+        ).queue();
         bot.upsertCommand("kick", "Kicks a user from the guild.").addOptions(
                 new OptionData(OptionType.USER, "member", "The user you want to kick."),
                 new OptionData(OptionType.STRING, "reason", "Why do you want to kick them.")
